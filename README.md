@@ -16,7 +16,7 @@ Project uses 3-tier architecture:
 1. Data access tier -> handled by DAO;
 2. Business logic tier -> handled by Service;
 3. Presentation tier -> handled by Controllers and Spring.
-   <img src="structure.png" width="50%">
+   <img src="structure.png" width="75%">
 # Technologies
 - Maven
 - Java programming language (JDK 11)
