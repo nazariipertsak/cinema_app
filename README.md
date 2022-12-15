@@ -1,6 +1,6 @@
 # :cinema: Cinema-Service :cinema:
 # Project description
-Simple simulation of cinema service for ordering tickets that supports authentication, registration and other CRUD operations.
+Simple REST API of cinema service for ordering tickets that supports authentication, registration and other CRUD operations.
 # Features
 - registration or login as user
 - create(only for user with role Admin) and find movies
@@ -19,19 +19,22 @@ Project uses 3-tier architecture:
    <img src="structure.png" width="75%">
 # Technologies
 - Maven
-- Java programming language (JDK 11)
+- JDK 11
 - JDBC
-- Spring
+- Spring-Core
 - Spring-Web
 - Spring-Security
 - Hibernate
 - Tomcat 9.0.50
 - MySQL 8.0
 # Instructions to run my project
-Copy content of it and then paste it to your DBMS query. I am using mySQL. <br/>
-1. Configure connection to your database in
+1. Clone repository <br/>
+2. Configure connection to your database in
 > [cinema-app/src/main/resources/db.properties]
 
 By changing driver, url to your database, username and password to your own. <br/>
-2. Run in console [mvn clean package] for project to build up. <br/>
-3. Run this in server. I am using Tomcat 9.0.50. <br/>
+3. Build project
+```shell
+mvn clean package
+``` <br/>
+4. Run this in server. I am using Tomcat 9.0.50. <br/>
