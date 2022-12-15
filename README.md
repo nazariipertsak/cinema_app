@@ -36,5 +36,5 @@ By changing driver, url to your database, username and password to your own. <br
 3. Build project
 ```shell
 mvn clean package
-``` <br/>
+```
 4. Run this in server. I am using Tomcat 9.0.50. <br/>
