@@ -4,6 +4,7 @@ import cinema.dao.AbstractDao;
 import cinema.dao.RoleDao;
 import cinema.exception.DataProcessingException;
 import cinema.model.Role;
+import java.util.Optional;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
@@ -16,12 +17,12 @@ public class RoleDaoImpl extends AbstractDao<Role> implements RoleDao {
     }
 
     @Override
-    public Role getByName(String roleName) {
+    public Optional<Role> getByName(String roleName) {
         try (Session session = factory.openSession()) {
             Query<Role> findByRoleName = session.createQuery(
                     "FROM Role r WHERE roleName = :name", Role.class);
             findByRoleName.setParameter("name", Role.RoleName.valueOf(roleName));
-            return findByRoleName.uniqueResult();
+            return findByRoleName.uniqueResultOptional();
         } catch (Exception e) {
             throw new DataProcessingException("Role with name " + roleName + " not found", e);
         }
