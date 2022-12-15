@@ -28,7 +28,7 @@ Project uses 3-tier architecture:
 - Tomcat 9.0.50
 - MySQL 8.0
 # Instructions to run my project
-1. Clone repository <br/>
+1. Clone this repository <br/>
 2. Configure connection to your database in
 > [cinema-app/src/main/resources/db.properties]
 
