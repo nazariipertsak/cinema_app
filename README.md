@@ -33,7 +33,8 @@ Project uses 3-tier architecture:
 > [cinema-app/src/main/resources/db.properties]
 
 By changing driver, url to your database, username and password to your own. <br/>
-   3. Build project
+
+3. Build project
 ```shell
 mvn clean package
 ```
